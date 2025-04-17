@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+
+
+#content {
+  width: 100%;
+}
+
+.slick-prev {
+  left: 0;
+  z-index: 1;
+  height: 100%;
+
+}
+
+.slick-next {
+  right: 0;
+  height: 100%;
+}
+
+
+
+div {
+  animation: reveal2 1s ease-out 0.5s;
+}
+img {
+  animation: reveal 1s ease-out 0.5s;
+}
+
+@keyframes reveal2 {
+  0% {
+    transform: translate(0,-100px);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    transform: translate(-100px,0);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+
+/* .relative {
+  animation: slideIn 1s ease-out 0.5s;
+} */
+.relative h1 {
+  animation: slideIn 5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.relative h2 {
+  animation: slideIn 3s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  60% {
+    transform: translateX(-10%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(2%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+}
