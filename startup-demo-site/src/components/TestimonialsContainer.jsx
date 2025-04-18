@@ -8,8 +8,8 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const TestimonialsCard = () => {
     return (
-        <div class="bg-white rounded-lg shadow-md overflow-hidden p-4">
-        <img alt="Customer Support Outsourcing for a Telecommunications Provider" class="w-full h-48 object-cover" src="https://placehold.co/600x400"/>
+        <div class="bg-white overflow-hidden p-4 w-[450px]">
+        <img alt="img" class="w-full rounded-t-xl object-cover" src="https://placehold.co/350x300"/>
         <div class="p-4">
          <h2 class="text-lg font-bold">
           Customer Support Outsourcing for a Telecommunications Provider
@@ -34,6 +34,7 @@ const TestimonialsSlider = forwardRef((props, ref) => {
     return (
     <div class="variable-slider flex flex-col p-4">
     <Slider ref={ref} {...settings}>
+        <TestimonialsCard/>
         <TestimonialsCard/>
         <TestimonialsCard/>
         <TestimonialsCard/>
@@ -65,7 +66,7 @@ const TestimonialsContainer = () => {
         <p className="text-blue-500 uppercase tracking-wide">Our Portfolio</p>
         <hr className="border-gray-300 my-4"/>
         <div className="flex justify-between items-center">
-            <h1 className="text-4xl font-bold text-gray-900">Our featured <span className="font-light">Success Stories</span></h1>
+            <h1 className="text-4xl font-semibold text-gray-900">Our featured <span className="font-light">Success Stories</span></h1>
             <div className="flex space-x-4">
                 <button onClick={handlePrev} className="slick-slider-prev2 w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 shadow-md slick-arrow">
                 <FontAwesomeIcon icon={faArrowLeft} className="text-zinc-700" />

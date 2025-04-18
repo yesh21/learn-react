@@ -13,8 +13,8 @@ const CarouselSlides = (props) => {
     <div className="relative">
         <img className="object-cover h-screen w-full opacity-70" src={props.imagescr}/>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <h1 className="text-4xl md:text-6xl font-bold">First</h1>
-            <h2 className="text-4xl md:text-6xl font-bold">Tag</h2>
+            <h1 className="text-4xl md:text-6xl font-normal text-white">TRANSFORM YOUR BUSINESS</h1>
+            <h2 className="text-4xl md:text-6xl font-bold text-white">with our AI solutions</h2>
         </div>
     </div>
 );

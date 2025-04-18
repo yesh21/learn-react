@@ -73,3 +73,16 @@ img {
   }
 
 }
+
+
+@font-face {
+  font-family: 'SatoshiVariable';
+  src: url('./fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 100 900; /* variable font weight range */
+  font-display: swap;
+}
+
+body {
+  font-family: 'SatoshiVariable', sans-serif;
+  overflow-x: hidden;
+}

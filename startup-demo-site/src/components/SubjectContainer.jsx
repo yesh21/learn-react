@@ -15,44 +15,44 @@ const SubjectContainer = () => {
       <h2 className="text-blue-500 text-sm uppercase mb-2">
        Why Us?
       </h2>
-      <h1 className="text-4xl font-bold mb-4">
+      <h1 className="text-4xl font-bold m-4">
        Customer satisfaction is our driving force.
       </h1>
-      <p className="text-gray-700 mb-8">
+      <p className="text-gray-700 m-8">
        We're a pioneer in computer vision technology, developing AI solutions that empower machines to see, understand, and interpret the world around them.
       </p>
-      <ul className="space-y-4">
+      <ul className="space-y-4 m-8">
        <li className="flex items-start">
         <span className="text-gray-500 text-lg mr-2">
          01
         </span>
-        <span className="text-2xl font-bold">
+        <h3 className="text-2xl font-medium">
          Expertize in AI
-        </span>
+        </h3>
        </li>
        <li className="flex items-start">
         <span className="text-gray-500 text-lg mr-2">
          02
         </span>
-        <span className="text-2xl font-bold">
+        <h3 className="text-2xl font-medium">
          Comprehensive Solutions
-        </span>
+        </h3>
        </li>
        <li className="flex items-start">
         <span className="text-gray-500 text-lg mr-2">
          03
         </span>
-        <span className="text-2xl font-bold">
+        <h3 className="text-2xl font-medium">
          Agile &amp; Innovative
-        </span>
+        </h3>
        </li>
        <li className="flex items-start">
         <span className="text-gray-500 text-lg mr-2">
          04
         </span>
-        <span className="text-2xl font-bold">
+        <h3 className="text-2xl font-medium">
          Scalability
-        </span>
+        </h3>
        </li>
       </ul>
      </div>
@@ -70,10 +70,10 @@ const PartnersInfo = () => {
         <p className="text-lg md:text-xl lg:text-2xl font-light">
         Unlock growth, expand capabilities and deliver unmatched value through with
         </p>
-        <p className="text-lg md:text-xl lg:text-2xl font-bold">
+        <p className="text-lg md:text-xl lg:text-2xl font-semibold">
         our collaboration with our technology, business, consulting and academic partnerships
         </p>
-        <div className="flex flex-wrap md:grid-cols-5 space-y-2 items-center justify-around">
+        <div className="flex flex-wrap p-4 md:grid-cols-5 space-y-2 items-center justify-around">
             <img alt="Micro Focus logo" class="h-12 md:h-16 lg:h-20" src="https://placehold.co/100x50?text=Micro+Focus+Logo"/>
             <img alt="IBM logo" class="h-12 md:h-16 lg:h-20" src="https://placehold.co/100x50?text=IBM+Logo"/>
             <img alt="Salesforce logo" class="h-12 md:h-16 lg:h-20" src="https://placehold.co/100x50?text=Salesforce+Logo"/>
@@ -86,11 +86,13 @@ const PartnersInfo = () => {
 
 const ExpertiseTiles = () => {
     return (
-        <div className="flex flex-col items-center p-6 bg-white shadow-md rounded-lg">
+        <div className="flex flex-col items-center bg-white border border-gray-200">
+            <div className="flex flex-col justify-center m-4 w-48 h-48 items-center hover:bg-gradient-to-r hover:from-white hover:to-sky-400">
         <img alt="Icon representing manufacturing" class="mb-4" src="https://placehold.co/100x100"/>
-        <p className="text-lg font-semibold">
+        <p className="text-lg font-light">
          Manufacturing
         </p>
+        </div>
        </div>
 
     );
@@ -100,7 +102,7 @@ const ExpertiseList = () => {
     return (
         <div className="container mx-auto py-12">
     <div className="flex flex-col md:flex-row justify-between items-center">
-     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+     <div className="grid grid-cols-2 lg:grid-cols-3">
         <ExpertiseTiles/>
         <ExpertiseTiles/>
         <ExpertiseTiles/>
@@ -109,7 +111,7 @@ const ExpertiseList = () => {
         <ExpertiseTiles/>
      </div>
      <div className="m-8 md:mt-0 md:ml-8 text-center md:text-left">
-      <h2 className="text-4xl font-bold text-blue-500">
+      <h2 className="text-4xl font-bold text-sky-500">
        INDUSTRY
       </h2>
       <h3 className="text-4xl font-light text-blue-300">

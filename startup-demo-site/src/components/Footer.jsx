@@ -4,9 +4,9 @@ import IndiaLogo from '../assets/indialogo.png';
 
 const Footer = () => {
     return (
-        <footer class="bg-black text-white">
-    <div class="flex flex-col md:flex-row">
-   <div class="flex justify-between items-center p-4">
+    <footer class="bg-black text-white">
+    <div class="flex flex-col md:flex-row justify-between p-4 border-b border-zinc-700">
+   <div class="flex justify-between items-center mb-4">
     <img alt="Company logo with an infinity symbol and text 'LEITTBEX AI'" class="h-12" src={IndiaLogo}/>
     </div>
     <div class="flex space-x-4 max-w-full">
@@ -40,8 +40,8 @@ const Footer = () => {
      </a>
     </div>
 </div>
-   <main class="flex flex-col md:flex-row p-4">
-    <div class="md:w-2/3">
+   <main class="flex flex-col md:flex-row justify-between">
+    <div class="md:w-3/5 p-8 border-r border-zinc-700">
      <h1 class="text-4xl md:text-6xl font-bold leading-tight">
       Facing digital transformation challenges? Leverage our expertise to gain
      </h1>
@@ -57,11 +57,11 @@ const Footer = () => {
         </div>
     </div>
     </div>
-    <div class="md:w-1/3 mt-8 md:mt-0">
-     <h2 class="text-xl font-semibold mb-4">
+    <div class="md:w-1/3 p-6 md:mt-0">
+    <h2 class="text-xl font-semibold mb-4">
       USEFUL LINKS
      </h2>
-     <div class="flex justify-around">
+     <div class="flex justify-between">
      <ul class="space-y-2">
       <li>
        <a class="hover:underline" href="#">
@@ -112,7 +112,7 @@ const Footer = () => {
       </li>
      </ul>
     </div>
-    <div class="flex items-center bg-gray-800 rounded-full px-4 py-2 mt-4 w-full">
+    <div class="flex items-center bg-gray-800 rounded-full px-4 py-2 mt-4 w-4/5 mx-auto">
         <input type="email" placeholder="Type Your Email" class="bg-transparent text-white outline-none w-full"/>
         <FontAwesomeIcon icon={faArrowRight} className="text-white ml-2" />
     </div>

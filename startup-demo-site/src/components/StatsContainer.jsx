@@ -1,7 +1,7 @@
 const StatsContainer = () => {
     return (
-<div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 bg-zinc-100">
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div className="py-16 px-4 sm:px-6 lg:px-8 bg-zinc-100">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
         <div className="text-center md:text-left">
             <p className="text-6xl font-bold text-blue-400">70%</p>
             <p className="mt-4 text-lg text-gray-700">of SMEs are certified across key domains such as technology, finance, healthcare, manufacturing, and more.</p>

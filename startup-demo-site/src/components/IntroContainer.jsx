@@ -5,7 +5,7 @@ const IntroContainer = () => {
     <div className="container mx-auto px-4 py-8">
     <div className="flex flex-col lg:flex-row items-center justify-center lg:space-x-16">
         <div className="lg:w-1/4 mb-8">
-        <ScrollTextReveal className="text-3xl font-semibold leading-snug" text="We proudly boast a diverse team of 200+ SMEs each with extensive experience and in-depth knowledge in their respective fields." />
+        <ScrollTextReveal className="text-3xl font-medium leading-snug" text="We proudly boast a diverse team of 200+ SMEs each with extensive experience and in-depth knowledge in their respective fields." />
 
         </div>
         <div className="lg:w-2/4">
