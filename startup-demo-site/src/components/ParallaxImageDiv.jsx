@@ -27,7 +27,7 @@ const ParallaxImageDiv = () => {
     }, []);
     return (
 
-        <div className="flex max-w-[1440px] mx-auto py-10 px-6 gap-10 items-center justify-center" ref={containerRef}>
+        <div className="hidden md:flex flex max-w-[1440px] mx-auto py-10 px-6 gap-10 items-center justify-center" ref={containerRef}>
         <div className="">
           <img src="https://placehold.co/300x500" alt="" className="w-full h-auto object-cover" width="400" height="600"/>
         </div>
