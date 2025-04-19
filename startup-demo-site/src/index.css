@@ -84,5 +84,11 @@ img {
 
 body {
   font-family: 'SatoshiVariable', sans-serif;
+}
+
+
+#root {
   overflow-x: hidden;
+    position: relative;
+    width: 100vw;
 }
