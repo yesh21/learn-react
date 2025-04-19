@@ -3,7 +3,17 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const ProductsCard = () => {
     return (
-        <div class="bg-gray-50 p-8 rounded-lg shadow-md flex flex-col items-start">
+        
+        <div class="relative bg-gray-50 group p-8 rounded-lg flex flex-col items-start">
+            
+            
+            <div class="absolute -top-4 -right-4 p-6 bg-white rounded-2xl invisible group-hover:visible">
+            <div class="px-3 py-2 border rounded-full hover:bg-blue-300 hover:text-white">
+
+            <FontAwesomeIcon icon={faArrowRight} className="text-gray-600 -rotate-45" />
+            </div>
+            </div>
+
         <img alt="Icon of a gear with technology elements" class="mb-4" src="https://placehold.co/64x64"/>
         <h2 class="text-xl font-semibold mb-2">
         Data & AI Engineering
@@ -26,7 +36,7 @@ const ProductsTitle = () => {
         <h1 class="text-4xl font-bold mt-4">WHAT WE <span class="text-4xl font-normal mt-4"> OFFER </span></h1>
         <div class="flex items-center space-x-2">
             <a href="#" class="text-sm text-gray-600">View all services</a>
-            <div class="bg-blue-100 p-4 rounded-full">
+            <div class="bg-blue-100 px-3 py-2 rounded-full">
                 <FontAwesomeIcon icon={faArrowRight} className="text-gray-600 -rotate-45" />
             </div>
         </div>

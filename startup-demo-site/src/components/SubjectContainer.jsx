@@ -1,6 +1,6 @@
 const SubjectContainer = () => {
     return (
-        <div>
+        <>
         <div className="container mx-auto px-4 py-8">
     <div className="flex flex-col md:flex-row items-center">
      <div className="w-full lg:w-1/2">
@@ -60,7 +60,7 @@ const SubjectContainer = () => {
    </div>
    <PartnersInfo/>
    <ExpertiseList/>
-   </div>
+   </>
    );
 };
 
@@ -100,8 +100,8 @@ const ExpertiseTiles = () => {
 
 const ExpertiseList = () => {
     return (
-        <div className="container mx-auto py-12">
-    <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className=" mx-auto py-12 top-div relative z-9 bg-white">
+    <div className="flex flex-col md:flex-row justify-around items-center">
      <div className="grid grid-cols-2 lg:grid-cols-3">
         <ExpertiseTiles/>
         <ExpertiseTiles/>

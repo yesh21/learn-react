@@ -62,10 +62,9 @@ const TestimonialsContainer = () => {
     return (
 <div>
 <div className="container mx-auto py-10">
-    <div className="text-center">
-        <p className="text-blue-500 uppercase tracking-wide">Our Portfolio</p>
-        <hr className="border-gray-300 my-4"/>
-        <div className="flex justify-between items-center">
+    <div className="">
+        <p className="text-blue-500 uppercase tracking-wide p-4">Our Portfolio</p>
+        <div className="flex justify-between items-center p-4 border-t border-gray-300 border-r">
             <h1 className="text-4xl font-semibold text-gray-900">Our featured <span className="font-light">Success Stories</span></h1>
             <div className="flex space-x-4">
                 <button onClick={handlePrev} className="slick-slider-prev2 w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 shadow-md slick-arrow">

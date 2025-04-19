@@ -19,26 +19,26 @@ const ParallaxImageDiv = () => {
           $(imageRef.current).css('transform', 'translateY(0)');
         }
       };
-  
-      $(window).on('scroll', handleScroll);
-      return () => {
-        $(window).off('scroll', handleScroll);
-      };
+      handleScroll
+       $(window).on('scroll', handleScroll);
+       return () => {
+         $(window).off('scroll', handleScroll);
+       };
     }, []);
     return (
 
-        <div class="flex max-w-[1440px] mx-auto py-10 px-6 gap-10 items-center" ref={containerRef}>
-        <div class="">
-          <img src="https://placehold.co/300x500" alt="" class="w-full h-auto object-cover" width="400" height="600"/>
+        <div className="flex max-w-[1440px] mx-auto py-10 px-6 gap-10 items-center justify-center" ref={containerRef}>
+        <div className="">
+          <img src="https://placehold.co/300x500" alt="" className="w-full h-auto object-cover" width="400" height="600"/>
         </div>
-        <div class="" style={{ height: '600px', position: 'relative', overflow: 'hidden', width: '400px' }}>
-          <img ref={imageRef} src="https://placehold.co/400x600" alt="" class="w-full h-auto object-cover" width="600" height="600"
+        <div className="" style={{ height: '600px', position: 'relative', overflow: 'hidden', width: '400px' }}>
+          <img ref={imageRef} src="https://placehold.co/400x600" alt="" className="w-full h-auto object-cover" width="600" height="600"
           style={{ position: 'absolute', top: 0, left: 0, width: '100%', willChange: 'transform' }}
           />
         </div>
-        <div class="flex flex-col gap-8">
-          <img src="https://placehold.co/400x250" alt="" class="w-full h-auto object-cover" width="500" height="250"/>
-          <img src="https://placehold.co/400x250" alt="" class="w-full h-auto object-cover" width="500" height="350"/>
+        <div className="flex flex-col gap-8">
+          <img src="https://placehold.co/400x250" alt="" className="w-full h-auto object-cover" width="500" height="250"/>
+          <img src="https://placehold.co/400x250" alt="" className="w-full h-auto object-cover" width="500" height="350"/>
         </div>
       </div>
     );

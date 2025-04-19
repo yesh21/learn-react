@@ -1,30 +1,23 @@
-import Header from './components/Header'; 
-import Carousel from './components/Carousel'; 
-import IntroContainer from './components/IntroContainer'; 
-import ProductsContainer from './components/ProductsContainer'; 
-import StatsContainer from './components/StatsContainer';
-import TestimonialsContainer from './components/TestimonialsContainer';
-import SubjectContainer from './components/SubjectContainer';
-import BackToTop from './components/BackToTop';
-import Footer from './components/Footer';
-import ParallaxImageDiv from './components/ParallaxImageDiv';
+import Index from './components/Index'; 
+import DataAi from './components/services/DataAi'; 
+import Careers from './components/careers/Careers'; 
 
 import './App.css'
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   
   return (
     <>
-    <Header />
-    <BackToTop/>
-    <Carousel />
-    <ParallaxImageDiv/>
-    <IntroContainer />
-    <StatsContainer />
-    <ProductsContainer/>
-    <TestimonialsContainer/>
-    <SubjectContainer/>
-    <Footer/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/data-ai" element={<DataAi />} />
+        <Route path="/careers" element={<Careers />} />
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }

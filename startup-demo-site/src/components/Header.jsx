@@ -3,6 +3,7 @@ import IndiaLogo from '../assets/indialogo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import MobileSidebar from './MobileSidebar'; // Import the Header component
+import { Link } from 'react-router-dom';
 
 
 const HoverDropdown = (props) => {
@@ -14,7 +15,7 @@ const HoverDropdown = (props) => {
     <div className="absolute left-0 w-48 bg-white border rounded shadow-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-opacity">
       <ul className="py-1">
         <li>
-          <a href="#" className="block px-4 py-2 hover:bg-gray-100">Link 1</a>
+        <Link to="/data-ai" className="block px-4 py-2 hover:bg-gray-100" >Data-Ai</Link>
         </li>
         <li>
           <a href="#" className="block px-4 py-2 hover:bg-gray-100">Link 2</a>
@@ -57,13 +58,13 @@ const Header = () => {
     >
    <div className="container mx-auto flex justify-between items-center py-4 px-6">
     <div className="flex items-center">
-     <img alt="Company Logo" className="h-10" src={IndiaLogo}/>
+     <img alt="Company Logo" className="h-8" src={IndiaLogo}/>
     </div>
-    <nav className="hidden md:flex space-x-6">
+    <nav className="hidden md:flex lg:space-x-6">
       <HoverDropdown name = "SERVICES" />
       <HoverDropdown name = "INNOVATION" />
       <HoverDropdown name = "ABOUT" />
-      <HoverDropdown name = "CARE" />
+      <Link to="/careers" className="relative px-4 py-2 mb-2 text-black rounded" >CAREERS</Link>
       <HoverDropdown name = "INSIGHTS" />
       <HoverDropdown name = "CONTACT" />
     </nav>
