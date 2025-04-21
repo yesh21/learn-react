@@ -15,7 +15,7 @@ const HoverDropdown = (props) => {
     <div className="absolute left-0 w-48 bg-white border rounded shadow-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-opacity">
       <ul className="py-1">
         <li>
-        <Link to="/data-ai" className="block px-4 py-2 hover:bg-gray-100" >Data-Ai</Link>
+        <Link to="/learn-react/data-ai" className="block px-4 py-2 hover:bg-gray-100" >Data-Ai</Link>
         </li>
         <li>
           <a href="#" className="block px-4 py-2 hover:bg-gray-100">Link 2</a>
@@ -64,7 +64,7 @@ const Header = () => {
       <HoverDropdown name = "SERVICES" />
       <HoverDropdown name = "INNOVATION" />
       <HoverDropdown name = "ABOUT" />
-      <Link to="/careers" className="relative px-4 py-2 mb-2 text-black rounded" >CAREERS</Link>
+      <Link to="/learn-react/careers" className="relative px-4 py-2 mb-2 text-black rounded" >CAREERS</Link>
       <HoverDropdown name = "INSIGHTS" />
       <HoverDropdown name = "CONTACT" />
     </nav>

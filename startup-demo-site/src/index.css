@@ -18,6 +18,9 @@
   height: 100%;
 }
 
+.slick-track {
+  display:flex !important;
+}
 
 
 div {
@@ -89,6 +92,5 @@ body {
 
 #root {
   overflow-x: hidden;
-    position: relative;
     width: 100vw;
 }

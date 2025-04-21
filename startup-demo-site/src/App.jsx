@@ -13,9 +13,9 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/data-ai" element={<DataAi />} />
-        <Route path="/careers" element={<Careers />} />
+        <Route path="/learn-react/" element={<Index />} />
+        <Route path="/learn-react/data-ai" element={<DataAi />} />
+        <Route path="/learn-react/careers" element={<Careers />} />
       </Routes>
     </BrowserRouter>
     </>

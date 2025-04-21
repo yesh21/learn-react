@@ -66,7 +66,7 @@ const SubjectContainer = () => {
 
 const PartnersInfo = () => {
     return (
-    <div className="text-center py-16 bg-neutral-100">
+    <div className="text-center py-16 bg-neutral-100 z-9 relative">
         <p className="text-lg md:text-xl lg:text-2xl font-light">
         Unlock growth, expand capabilities and deliver unmatched value through with
         </p>

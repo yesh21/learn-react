@@ -11,7 +11,7 @@ import React, { useState } from "react";
 const CarouselSlides = (props) => {
     return (
     <div className="relative">
-        <img className="object-cover h-screen w-full opacity-70" src={props.imagescr}/>
+        <img className="object-cover h-svh w-full opacity-70" src={props.imagescr}/>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
             <h1 className="text-4xl md:text-6xl font-normal text-white">TRANSFORM YOUR BUSINESS</h1>
             <h2 className="text-4xl md:text-6xl font-bold text-white">with our AI solutions</h2>
@@ -40,10 +40,10 @@ const Carousel = () => {
         afterChange: (index) => setCurrentSlide(index+1), // Update state on slide change
 
           };
-    
+    screen
     return (
       <div className="w-full">
-        <div className="h-full w-full m-auto">
+        <div className="h-svh min-h-screen w-full m-auto">
         <Slider ref={slider} {...settings}>
             <CarouselSlides imagescr = {CarouselImage1}></CarouselSlides>
             <CarouselSlides imagescr = {CarouselImage2}></CarouselSlides>

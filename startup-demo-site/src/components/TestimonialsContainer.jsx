@@ -8,7 +8,7 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const TestimonialsCard = () => {
     return (
-        <div class="bg-white overflow-hidden p-4 w-[450px]">
+        <div class="bg-white overflow-hidden p-4 w-[350px] md:w-[450px]">
         <img alt="img" class="w-full rounded-t-xl object-cover" src="https://placehold.co/350x300"/>
         <div class="p-4">
          <h2 class="text-lg font-bold">
@@ -61,7 +61,7 @@ const TestimonialsContainer = () => {
   
     return (
 <div>
-<div className="container mx-auto py-10">
+<div className="mx-auto py-10">
     <div className="">
         <p className="text-blue-500 uppercase tracking-wide p-4">Our Portfolio</p>
         <div className="flex justify-between items-center p-4 border-t border-gray-300 border-r">

@@ -11,23 +11,29 @@ const Footer = () => {
     const footerRef = useRef(null);
 
     useLayoutEffect(() => {
-    gsap.set(footerRef.current, { y: -400 });
+      const handleLoad = () => {    
+        gsap.set(footerRef.current, { y: -600 });
 
-    gsap.to(footerRef.current    , {
-        y: 0,
-        ease: "none",
-        scrollTrigger: {
-          trigger: $('div.top-div'),
-          start: "top center",
-          //markers: true,
-          end: "center top",
-          scrub: true, 
-        },
-      });
-        console.log("gsap")  
+        gsap.to(footerRef.current    , {
+            y: 0,
+            ease: "none",
+            scrollTrigger: {
+              trigger: $('div.top-div'),
+              start: "top center",
+              //markers: true,
+              end: "center top",
+              scrub: true, 
+            },
+          });
+            console.log("gsap")  
+          };
+
       // Cleanup
+      window.addEventListener('load', handleLoad);
+
       return () => {
         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        window.removeEventListener('load', handleLoad);
       };
     }, []);
   
