@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import IndiaLogo from '../assets/indialogo.png';
@@ -10,7 +10,7 @@ const Footer = () => {
     gsap.registerPlugin(ScrollTrigger);
     const footerRef = useRef(null);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
       const handleLoad = () => {    
         gsap.set(footerRef.current, { y: -600 });
 
@@ -29,6 +29,7 @@ const Footer = () => {
           };
 
       // Cleanup
+      //handleLoad()
       window.addEventListener('load', handleLoad);
 
       return () => {

@@ -3,6 +3,8 @@ import IndiaLogo from '../assets/indialogo.png';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
+import { HeaderLinksData } from './Header';
+import { Link } from 'react-router-dom';
 
 
 const Collapsibles = (props) => {
@@ -23,25 +25,11 @@ const Collapsibles = (props) => {
       </span>        
       </div>
       <ul className={`${isOpen ? "block" : "hidden"} mt-2 mb-4 space-y-2 px-6`}>
-      <li className='text-gray-500 hover:text-gray-800'>
-       Data &amp; AI Engineering
-      </li>
-      <li className='text-gray-500 hover:text-gray-900'>
-       Product Engineering
-      </li>
-      <li className='text-gray-500 hover:text-gray-900'>
-       Enterprise Solutions
-      </li>
-      <li className='text-gray-500 hover:text-gray-900'>
-       Quality Engineering
-      </li>
-      <li className='text-gray-500 hover:text-gray-900'>
-       Staffing
-      </li>
-      <li className='text-gray-500 hover:text-gray-900'>
-       Business Process Outsourcing
-      </li>
-     </ul>
+      {props.subnames.map((item) =>(
+              <li>
+              <Link to={item.value} className="block px-4 py-2 hover:bg-gray-100" >{item.name}</Link>
+              </li>
+      ))}     </ul>
       </div>
       </div>
     );
@@ -57,13 +45,10 @@ const MobileSidebar = ({ onClose }) => {
     <button onClick={onClose} class="text-2xl">x
     </button>
    </div>
-   <div class="border-t border-gray-300 mt-12 ps-6 overflow-scroll max-h-screen">
-    <Collapsibles name = "SERVICES"/>
-    <Collapsibles name = "INNOVATION"/>
-    <Collapsibles name = "ABOUT"/>
-    <Collapsibles name = "CAREERS"/>
-    <Collapsibles name = "INSIGHTS"/>
-    <Collapsibles name = "CONTACT"/>
+   <div class="border-t border-gray-300 mt-12 ps-6 pb-40 overflow-scroll max-h-screen">
+    {HeaderLinksData.map((item) =>(
+          <Collapsibles {...item}/>
+    ))}
    </div>
   </div>
 

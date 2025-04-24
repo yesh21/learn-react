@@ -6,21 +6,34 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 
-const TestimonialsCard = () => {
+const TestimonialsCard = (props) => {
     return (
-        <div class="bg-white overflow-hidden p-4 w-[350px] md:w-[450px]">
-        <img alt="img" class="w-full rounded-t-xl object-cover" src="https://placehold.co/350x300"/>
-        <div class="p-4">
-         <h2 class="text-lg font-bold">
+        <div className="bg-white overflow-hidden p-4 w-[350px] md:w-[450px]">
+        <img alt="img" className="w-full rounded-t-xl object-cover" src="https://placehold.co/350x300"/>
+        <div className="p-4">
+         <h2 className="text-lg font-bold">
+          {props.title}
           Customer Support Outsourcing for a Telecommunications Provider
          </h2>
-         <p class="text-gray-600">
+         <p className="text-gray-600">
+          {props.content}
           Business Process Outsourcing
          </p>
         </div>
        </div>
     );
 };
+
+
+const TestimonialsCardData = [
+  { title: "First ", content: "This is the first content." },
+  { title: "Second ", content: "This is the second content." },
+  { title: "Third ", content: "This is the third content." },
+  { title: "Forth ", content: "This is the forth content." },
+  { title: "Fifth ", content: "This is the fifth content." }
+
+];
+
 const TestimonialsSlider = forwardRef((props, ref) => {
 
     const settings = {
@@ -32,13 +45,12 @@ const TestimonialsSlider = forwardRef((props, ref) => {
         swipe: true, // Enables swipe functionality
       };
     return (
-    <div class="variable-slider flex flex-col p-4">
+    <div className="variable-slider flex flex-col p-4">
     <Slider ref={ref} {...settings}>
-        <TestimonialsCard/>
-        <TestimonialsCard/>
-        <TestimonialsCard/>
-        <TestimonialsCard/>
-        <TestimonialsCard/>
+      {TestimonialsCardData.map((item)=>(
+        <TestimonialsCard {...item}  />
+
+))}
     </Slider>
     </div>
     );

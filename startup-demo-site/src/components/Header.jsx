@@ -11,24 +11,64 @@ const HoverDropdown = (props) => {
   <div className="relative inline-block text-left group">
     <button className="px-4 py-2 mb-2 text-black rounded">
       {props.name}
+
     </button>
+
     <div className="absolute left-0 w-48 bg-white border rounded shadow-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-opacity">
-      <ul className="py-1">
-        <li>
-        <Link to="/learn-react/data-ai" className="block px-4 py-2 hover:bg-gray-100" >Data-Ai</Link>
-        </li>
-        <li>
-          <a href="#" className="block px-4 py-2 hover:bg-gray-100">Link 2</a>
-        </li>
-        <li>
-          <a href="#" className="block px-4 py-2 hover:bg-gray-100">Link 3</a>
-        </li>
+    <ul className="py-1">
+    {props.subnames.map((item) =>(
+              <li>
+              <Link to={item.value} className="block px-4 py-2 hover:bg-gray-100" >{item.name}</Link>
+              </li>
+      ))}
       </ul>
     </div>
   </div>
 );
 };
 
+export const HeaderLinksData = [
+  {
+    name: "SERVICES",
+    subnames: [
+      { name: "SubName1", value: "/learn-react/data-ai" },
+      { name: "SubName2", value: "/learn-react/data-ai" },
+      { name: "SubName3", value: "/learn-react/data-ai" }
+    ]
+  },
+  {
+    name: "INNOVATION",
+    subnames: [
+      { name: "SubName4", value: "/learn-react/data-ai" },
+      { name: "SubName5", value: "/learn-react/data-ai" },
+      { name: "SubName6", value: "/learn-react/data-ai" }
+    ]
+  },
+  {
+    name: "ABOUT",
+    subnames: [
+      { name: "SubName1", value: "/learn-react/data-ai" },
+      { name: "SubName2", value: "/learn-react/data-ai" },
+      { name: "SubName3", value: "/learn-react/data-ai" }
+    ]
+  },
+  {
+    name: "INSIGHTS",
+    subnames: [
+      { name: "SubName1", value: "/learn-react/data-ai" },
+      { name: "SubName2", value: "/learn-react/data-ai" },
+      { name: "SubName3", value: "/learn-react/data-ai" }
+    ]
+  },
+  {
+    name: "CONTACT",
+    subnames: [
+      { name: "SubName1", value: "/learn-react/data-ai" },
+      { name: "SubName2", value: "/learn-react/data-ai" },
+      { name: "SubName3", value: "/learn-react/data-ai" }
+    ]
+  }
+];
 
 
 const Header = () => {
@@ -60,14 +100,16 @@ const Header = () => {
     <div className="flex items-center">
      <img alt="Company Logo" className="h-8" src={IndiaLogo}/>
     </div>
+
     <nav className="hidden md:flex lg:space-x-6">
-      <HoverDropdown name = "SERVICES" />
-      <HoverDropdown name = "INNOVATION" />
-      <HoverDropdown name = "ABOUT" />
+      {
+        HeaderLinksData.map((item, index) =>(
+          <HoverDropdown key={index} {...item} />
+        ))
+      }
       <Link to="/learn-react/careers" className="relative px-4 py-2 mb-2 text-black rounded" >CAREERS</Link>
-      <HoverDropdown name = "INSIGHTS" />
-      <HoverDropdown name = "CONTACT" />
     </nav>
+
     <div className="md:hidden">
      <button onClick={() => setSidebarOpen(true)} className="text-white focus:outline-none">
       <FontAwesomeIcon icon={faBars} className="text-gray-600" />

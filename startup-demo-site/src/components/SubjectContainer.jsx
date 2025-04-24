@@ -74,23 +74,23 @@ const PartnersInfo = () => {
         our collaboration with our technology, business, consulting and academic partnerships
         </p>
         <div className="flex flex-wrap p-4 md:grid-cols-5 space-y-2 items-center justify-around">
-            <img alt="Micro Focus logo" class="h-12 md:h-16 lg:h-20" src="https://placehold.co/100x50?text=Micro+Focus+Logo"/>
-            <img alt="IBM logo" class="h-12 md:h-16 lg:h-20" src="https://placehold.co/100x50?text=IBM+Logo"/>
-            <img alt="Salesforce logo" class="h-12 md:h-16 lg:h-20" src="https://placehold.co/100x50?text=Salesforce+Logo"/>
-            <img alt="AWS logo" class="h-12 md:h-16 lg:h-20" src="https://placehold.co/100x50?text=AWS+Logo"/>
-            <img alt="Azure logo" class="h-12 md:h-16 lg:h-20" src="https://placehold.co/100x50?text=Azure+Logo"/>
+            <img alt="Micro Focus logo" className="h-12 md:h-16 lg:h-20" src="https://placehold.co/100x50?text=Micro+Focus+Logo"/>
+            <img alt="IBM logo" className="h-12 md:h-16 lg:h-20" src="https://placehold.co/100x50?text=IBM+Logo"/>
+            <img alt="Salesforce logo" className="h-12 md:h-16 lg:h-20" src="https://placehold.co/100x50?text=Salesforce+Logo"/>
+            <img alt="AWS logo" className="h-12 md:h-16 lg:h-20" src="https://placehold.co/100x50?text=AWS+Logo"/>
+            <img alt="Azure logo" className="h-12 md:h-16 lg:h-20" src="https://placehold.co/100x50?text=Azure+Logo"/>
         </div>
     </div>
    );
 };
 
-const ExpertiseTiles = () => {
+const ExpertiseTiles = (props) => {
     return (
         <div className="flex flex-col items-center bg-white border border-gray-200">
             <div className="flex flex-col justify-center m-4 w-48 h-48 items-center hover:bg-gradient-to-r hover:from-white hover:to-sky-400">
-        <img alt="Icon representing manufacturing" class="mb-4" src="https://placehold.co/100x100"/>
+        <img alt="Icon representing manufacturing" className="mb-4" src="https://placehold.co/100x100"/>
         <p className="text-lg font-light">
-         Manufacturing
+         {props.name}
         </p>
         </div>
        </div>
@@ -98,17 +98,19 @@ const ExpertiseTiles = () => {
     );
 };
 
+
 const ExpertiseList = () => {
     return (
         <div className=" mx-auto py-12 top-div relative z-9 bg-white">
     <div className="flex flex-col md:flex-row justify-around items-center">
      <div className="grid grid-cols-2 lg:grid-cols-3">
-        <ExpertiseTiles/>
-        <ExpertiseTiles/>
-        <ExpertiseTiles/>
-        <ExpertiseTiles/>
-        <ExpertiseTiles/>
-        <ExpertiseTiles/>
+        <ExpertiseTiles name = "Manufacturing1"/>
+        <ExpertiseTiles name = "Manufacturing2"/>
+        <ExpertiseTiles name = "Manufacturing3"/>
+        <ExpertiseTiles name = "Manufacturing4"/>
+        <ExpertiseTiles name = "Manufacturing5"/>
+        <ExpertiseTiles name = "Manufacturing6"/>
+
      </div>
      <div className="m-8 md:mt-0 md:ml-8 text-center md:text-left">
       <h2 className="text-4xl font-bold text-sky-500">

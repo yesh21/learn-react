@@ -11,8 +11,8 @@ function Careers() {
       <BlendCurser />
       <Header />
       <BackToTop/>
-<div class="max-w-7xl mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-24">
-   <h1 class="text-5xl sm:text-6xl font-semibold leading-tight max-w-7xl mx-auto">
+<div class=" mx-auto px-6 sm:px-10 md:px-16 lg:px-24 py-24 relative z-9 bg-white">
+   <h1 class="text-5xl sm:text-6xl font-semibold leading-tight mx-auto text-center">
     Discover your place at‎ 
     <span class="text-[#5BA9C6]">
     ‎ MakeInIndia
